@@ -1,4 +1,4 @@
-/*   File: Puzzle/jazz.pro     (solution MM)
+/*   File: Puzzles/jazz.pro     (solution MM)
     Title: Sounds Logical?   From: Dell- Math Puzzles Logic Problems,	Jan 2002 p.15
 " Giant Book of Challenging Thinking Puzzles",
 Michael A. DiSPezio,Sterling Pub. House, ISBN  1-4027-1090-9, 2003 

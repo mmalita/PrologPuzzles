@@ -1,4 +1,4 @@
-/* File: Puzzle/knightN.pro
+/* File: Puzzles/knightN.pro
    Title:  Knight from corner to corner on a 3x3 board  Luger: page 650.
 Can the chess piece called horse/knight move from corner 
 up-left(1,1) to corner right-down (N,N) on chessboard NxN.

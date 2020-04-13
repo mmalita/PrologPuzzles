@@ -4,10 +4,10 @@ There are four men who would all like to cross a rickety old bridge.
 The old bridge will only support 2 men at a time, and it is night time, 
 so every crossing must use the one flashlight that they all share. 
 The four men each have different walking speeds; 
-the fastest each of them can cross is 1 minute, 2 minutes, 5, minutes, and 10 minutes. 
+the fastest each of them can cross is 1 minute, 2 minutes, 5 minutes, and 10 minutes.
 If they pair up, since they must share the flashlight, 
-they can only cross in the time that it would take the slower of the two. Given that the shortest 
-time to get them all across is 17 minutes total, how should they all cross?
+they can only cross in the time that it would take the slower of the two.
+Given that the shortest time to get them all across is 17 minutes total, how should they all cross?
 */
 /*
 We describe the problem as Nodes in a graph and the solution means to find a path from

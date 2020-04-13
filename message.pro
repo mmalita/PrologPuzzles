@@ -1,4 +1,4 @@
-/* 	File:   Puzzles/message.pro	Author: M. Malita
+/* 	File: Puzzles/message.pro	Author: M. Malita
         Title:  Message sending
 Email is out of order at St. Mary's College and the teacher wants 
 to tell Robert something urgent.
