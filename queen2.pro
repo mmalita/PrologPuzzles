@@ -17,7 +17,7 @@ start(S):- S=[1/Y1,2/Y2,3/Y3,4/Y4,5/Y5,6/Y6,7/Y7,8/Y8],
 	       list_comb(2,S,L),
            all_prop(not_diagonal,L).
 
-not_diagonal([X/Y,X1/Y1])- A is abs(X-X1),B is abs(Y-Y1),A \= B.
+not_diagonal([X/Y,X1/Y1]):- A is abs(X-X1),B is abs(Y-Y1),A \= B.
 
 /* mem1(Lr,L). For comb/3. Does not generate [a,b] and [b,a]. 	
 	?- mem1([X,Y],[a,b,c]).
