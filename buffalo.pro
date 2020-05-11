@@ -25,8 +25,10 @@ start(Sol):- F=[keith,libby,margo,nora,otto],
 member([keith,_,AgeK],Sol),member([_,ivey,AgeI],Sol),AgeK is AgeI+1,% 2
 	     member([nora,_,AgeN],Sol),AgeI is AgeN+1,
 	     member([margo,_,AgeM],Sol),
-	     member([_,fell,AgeF],Sol),AgeF is 3+AgeM,
-	     member([otto,_,AgeO],Sol),member([_,hall,AgeH],Sol).
+	     member([_,fell,AgeF],Sol),AgeF is 3+AgeM, %3
+	     member([otto,_,AgeO],Sol),member([_,hall,AgeH],Sol),AgeO is AgeH*2. %4
+
+write_list(L):-forall(member(X,L),(write(X),nl)).
 
 /* There are two types of restrictions:
 a) positive ones- when you fill the Solution
