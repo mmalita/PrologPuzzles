@@ -46,3 +46,5 @@ start(Sol):-  boy(B),girl(W),costume_boy(C),costume_girl(Cw),
   	   vince \== M1,					% 4  
 	   X\== sue,     					% 5                  
 	   G1 \== batman, A1 \== batman. 	% 7
+
+before(X,Y,L):- append(_,[X|R],L),member(Y,R).
