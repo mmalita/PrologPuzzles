@@ -37,7 +37,7 @@ start(S):-
 	is_set([Wm,Wc,Wp]),
     first([Pm,Pc,Pp],c), %  and his(Paul) highest grade was a "C"
 % Andrew outscored Bridget in Physics, and Neil in Math
-	first([Ap,Bp],Ap),best([Am,Nm],Am),
+	first([Ap,Bp],Ap),first([Am,Nm],Am),
 % Wendy was the only girl to get a "C" grade, but she managed no "A" grades 
 	not(member(c,[Bm,Bc,Bp])), 	% Brigdet (was the other girl) and she has no C
 	not(member(a,[Wm,Wc,Wp])), 	% Wendy has no A
