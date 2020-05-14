@@ -57,5 +57,5 @@ find(Sol):- Sol =  [S1,R1,N1,S2,R2,N2],
 		not([N1,R1]=[jazz,jazz]), %% 3. Niko and Ramon do not both pick jazz
 		not([N2,R2]=[jazz,jazz]),
         (S1=jazz ; (S1=rock,N1=jazz) ) , %% is sheila picks jazz does not matter
-        (S2=jazz ; (S2=rock,N2=jazz)).   %% %% is sheila picks rock, Nick has jazz
-
+        (S2=jazz ; (S2=rock,N2=jazz)),   %% %% is sheila picks rock, Nick has jazz
+        ([S1,S2]=[jazz,rock] ; [R1,R2]=[jazz,rock] ; [N1,N2]=[jazz,rock]).   %% %% at least one of them bought jazz on Saturday and rock on Sunday
