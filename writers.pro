@@ -45,14 +45,14 @@ start(S):- S=[[X1,W1,R1],[X2,W2,R2],[X3,W3,R3],[X4,W4,R4],[X5,W5,R5],[X6,W6,R6]]
         permutation([R1,R2,R3,R4,R5,R6],Type),
         W1\==R1,W2\==R2,W3\==R3,W4\==R4,W5\==R5,W6\==R6,
         %% 7. Mr. Yellow is the brother in law of the novelist.
-	not(member([yellow,novels,_],S)),
+	\+member([yellow,novels,_],S),
       	%% 2. Mr. Blue does not like to sit in the corner in the direction of the train.
         nth1(Nbb,S,[blue,_,_]), Nbb\==6,     
         %% 8. Mr. Black is staying in a corner and does not like history.
 	nth1(Nb,S,[black,_,_]),corner(Nb), 
-	not(member([black,history,_],S)),
+	\+member([black,history,_],S),
    	%% 5. The essayist  sits in front of the historian.	
 	nth1(Ne,S,[_,essays,_]), nth1(Nh,S,[_,history,_]),
         vis_a_vis(Ne,Nh),  
         %% 11. Mr. Red reads a book of pamphlets.
-	not(member([white,_,poems],S)).
+	\+member([white,_,poems],S).

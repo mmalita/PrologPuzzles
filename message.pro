@@ -41,5 +41,5 @@ initial(cr). final(ro).
 start:- initial(S),bkt(S,[],Sol),write(Sol).
 
 bkt(Node,Path,[Node|Path]):- final(Node).
-bkt(Node,Path,Sol):- arc1(Node,N1), not(member(N1,Path)),
+bkt(Node,Path,Sol):- arc1(Node,N1), \+member(N1,Path),
                      bkt(N1,[Node|Path],Sol).

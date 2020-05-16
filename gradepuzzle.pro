@@ -39,8 +39,8 @@ start(S):-
 % Andrew outscored Bridget in Physics, and Neil in Math
 	first([Ap,Bp],Ap),first([Am,Nm],Am),
 % Wendy was the only girl to get a "C" grade, but she managed no "A" grades 
-	not(member(c,[Bm,Bc,Bp])), 	% Brigdet (was the other girl) and she has no C
-	not(member(a,[Wm,Wc,Wp])), 	% Wendy has no A
+	\+member(c,[Bm,Bc,Bp]), 	% Brigdet (was the other girl) and she has no C
+	\+member(a,[Wm,Wc,Wp]), 	% Wendy has no A
     first([Bm,Bc,Bp],Bc), 		% Bridget's best result was in Chemistry
 	first([Pm,Bm],Pm), 			% but her Math grade was lower than Paul's 
 % The "B" in Math did not go to the same student as the "E" in Physics 

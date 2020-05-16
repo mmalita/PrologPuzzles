@@ -26,6 +26,6 @@ start(S):- S=[[H1,T1],[H2,T2],[H3,T3],[H4,T4]],
 	   member([flats,heelsHandcart],S),		%% 1. Harriet bought fuchsia flats at Heels in a Handcart.
 	   nth1(2,S,[_,footFarm]),				%% 3. The Foot Farm was Harriet's second stop.
 	   nth1(N1,S,[pumps,_]),				%% 2. The store she visited just after buying her purple pumps was not Tootsies.
-	   nth1(N2,S,[_,tooties]), not(N2 is N1+1),
+	   nth1(N2,S,[_,tooties]), \+N2 is N1+1,
 	   nth1(N3,S,[_,shoePlace]),  %% 4. Two stops after leaving The Shoe Place, Harriet bought her suede sandals
  	   nth1(N4,S,[sandals,_]), N4 is N3 + 2.

@@ -19,8 +19,8 @@ start:- initial(S),path(S,[],Sol),
 	final(s(farmer(w),goat(w),cabbage(w),wolf(w))).
 
 path(Node,Path,[Node|Path]):- final(Node).
-path(Node,Path,Sol):- move(Node,N1), not(bad(N1)),
-                      not(member(N1,Path)),                    
+path(Node,Path,Sol):- move(Node,N1), \+bad(N1),
+                      \+member(N1,Path),                    
                       path(N1,[Node|Path],Sol).
 
 %% opposite bank East is opposite to west Bank. opp/2   

@@ -27,8 +27,8 @@ true
 false
 ----------------------------------*/
 different([],[]).
-different([H1|T1],[H2|T2]):- not(var(H1)),not(var(H2)),
-                             not(H1=H2),different(T1,T2),!.
+different([H1|T1],[H2|T2]):- \+var(H1),\+var(H2),
+                             H1\=H2,different(T1,T2),!.
 different([H1|T1],[H2|T2]):- different(T1,T2),!.
 
 /*
@@ -45,7 +45,7 @@ Collect non variables from lines:
 ?- notvars([_,2,_,_,5,_,7,_,9,1],L).
 L = [2, 5, 7, 9, 1] 
 ----------------------------------*/
-notvars(L,G):-findall(X,(member(X,L),not(var(X))),G).
+notvars(L,G):-findall(X,(member(X,L),\+var(X)),G).
 
 solve(S):-  Nine=[1,2,3,4,5,6,7,8,9],
         S=[L1,L2,L3,L4,L5,L6,L7,L8,L9],

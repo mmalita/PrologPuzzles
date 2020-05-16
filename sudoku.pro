@@ -47,12 +47,12 @@ write_square(S):- nl,forall(member(X,S),(write(X),nl)),nl.
 /* two lines are different:
 	if they do not have any elements on the same position.
 ?- different([a,b],[b,a]).
-trur
+true
 ?- different([a,b],[a,a]).
 false
 ************************************************/
 different([],[]).
-different([H1|T1],[H2|T2]):- not(H1=H2),different(T1,T2).
+different([H1|T1],[H2|T2]):- H1\=H2,different(T1,T2).
 
 /* If two lines cover the same block add the condition:
 [A1,A2,A3 |A4,A5,A6, | A7,A8,A9]

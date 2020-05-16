@@ -29,7 +29,7 @@ no
 start:- initial(S),path(S,[],Sol),write('Found sol='),forall(member(X,Sol),(write(X),nl)).
 /* finding a path in a graph from initial node to final node */
 path(N,P,[N|P]):- final(N).
-path(N,P,Sol):- arc(N,N1),not(member(N1,P)),path(N1,[N|P],Sol).
+path(N,P,Sol):- arc(N,N1),\+member(N1,P),path(N1,[N|P],Sol).
 /* at the beginning All are on the same bank and Time=0 */
 initial([0,l,[a,b,c,d],[]]).
 /* at the end they have all to be on the other bank and Time=17*/
@@ -49,7 +49,7 @@ arc([T1,F1,L1,R1], [T2,F2,L2,R2]):- opp(F1,F2),
         take(X,R1,R2),append(X,L1,L2),findtime(X,T),T2 is T1+T)),T2 < 18.
 
 /* remove all elements in S from L result is in R */
-take(S,L,R):- findall(Z,(member(Z,L),not(member(Z,S))),R).
+take(S,L,R):- findall(Z,(member(Z,L),\+member(Z,S)),R).
 
 /* we know just one or two persons cross the bridge */
 findtime([X],Tim):- tim(X,Tim),!.
