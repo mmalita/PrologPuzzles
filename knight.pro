@@ -73,7 +73,7 @@ initial(1).		%% 1 is initial node
 final(9).			%% 9 is final node
 %% Starting Node is Start, Sol is a list of Nodes 
 %% beginning with Start ending with the final Node.
-start:- initial(Start),path(Start,[Start],Sol),
+start:- initial(Start),path(Start,[],Sol),
         reverse(Sol,Res),write(Res).
 
 path(Node,Path,[Node|Path]):- final(Node).
