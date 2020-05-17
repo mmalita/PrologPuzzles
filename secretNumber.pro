@@ -19,8 +19,7 @@ start(S):-  S=[X,Y,Z,W],   %% to check S=[3,7,1,9],
 			% 2 elements in common and 1 same position
 			intersection([3,6,9,4],S,L3),length(L3,2),samePlace(S,[3,6,9,4],[_]),
 			intersection([4,7,2,1],S,L4),length(L4,2),samePlace(S,[4,7,2,1],[_]),
-			intersection([1,2,3,7],S,L5),length(L5,3), % 3 elements in common
-            write(S).
+			intersection([1,2,3,7],S,L5),length(L5,3). % 3 elements in common
 			
 /* Find elements the same in the same position
 ?- samePlace([a,b],[b,a],R).
