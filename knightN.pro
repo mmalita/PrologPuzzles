@@ -30,7 +30,7 @@ path(N,Node,Path,Sol):- move(Node,Node1,N),\+member(Node1,Path),
 
 %% be careful: retract(final/1). %before your start once more
 start:-	write('Size of your board? '),read(N),
-        assert(final((N,N))),  %% the lower-right corner
+        assertz(final((N,N))),  %% the lower-right corner
 	    initial(Start),path(N,Start,[Start],Res),
         reverse(Res,Sol),write(Sol),nl,false.		
 

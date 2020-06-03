@@ -34,7 +34,7 @@ called: visited(?Node)
 	No
 :- dynamic visited/1.
 path(Z,Z).
-path(X,Y):- move(X,W),\+visited(W),assert(visited(W)),path(W,Y).
+path(X,Y):- move(X,W),\+visited(W),assertz(visited(W)),path(W,Y).
 
 start:- retractall(visited(_)),path(1,9).
 ----------------------------------------------------------*/
