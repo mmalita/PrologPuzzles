@@ -24,12 +24,12 @@ I= [[lou,bear,tess,gipsy],[vince,batman,mary,snow_white],[matt,prince,sue,cat],
 [[Man,Costume_man,Woman,Costume_woman],[_,_,_,_],[_,_,_,_],[_,_,_,_]]
 **********************************************************/
 boy([vince,chuck,lou,matt]). 		
-girl([sue,mary,ann,sue]).
+girl([sue,mary,ann,tess]).
 costume_boy([batman,donald_duck,prince,bear]).
 costume_girl([witch,gipsy,cat,snow_white]).
 
-start(Sol):-  boy(B),girl(W),costume_boy(C),costume_girl(Cw),
-	   Sol=[[M1,C1,W1,Cw1],[M2,C2,W2,Cw2],[M3,C3,W3,Cw3],[M4,C4,W4,Cw4]], % 1
+start(Sol):-  boy(B),girl(W),costume_boy(Cb),costume_girl(Cw),
+	   Sol=[[M1,Cb1,W1,Cw1],[M2,Cb2,W2,Cw2],[M3,Cb3,W3,Cw3],[M4,Cb4,W4,Cw4]], % 1
 	   member([matt,_,_,cat],Sol), 					% 2
        Sol=[X1,X2,[matt,_,_,cat],_],				% 3 
 	   (member(bear,X1) ; member(bear,X2)),			% 3
@@ -40,8 +40,8 @@ start(Sol):-  boy(B),girl(W),costume_boy(C),costume_girl(Cw),
 	   before([_,G1,_,gipsy],[_,A1,ann,_],Sol),		% 7
 	   before([_,_,tess,_],[_,_,_,snow_white],Sol), % 8
 	   permutation([M1,M2,M3,M4],B),
-	   permutation([C1,C2,C3,C4],C),
-	   permutation([W1,W2,W3,W4],G),
+	   permutation([Cb1,Cb2,Cb3,Cb4],Cb),
+	   permutation([W1,W2,W3,W4],W),
 	   permutation([Cw1,Cw2,Cw3,Cw4],Cw),
   	   vince \== M1,					% 4  
 	   X\== sue,     					% 5                  
