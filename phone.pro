@@ -3,7 +3,7 @@ Title: Transforms phone numbers written with digits in words.
 */
 /* a -97  e-101  i- 105 o-111 u-117 y-121  ?- two_vowels(soap).
 	vowel(V):-member(V,[97,101,105,111,117,121]).
-	two_vowels(Word):-name(Word,Lw),append(_,[V1,V2|_],Lw),vowel(V1),vowel(V2).
+	two_vowels(Word):-atom_codes(Word,Lw),append(_,[V1,V2|_],Lw),vowel(V1),vowel(V2).
 */
 	key(1,[1]).
 	key(2,[a,b,c]).
