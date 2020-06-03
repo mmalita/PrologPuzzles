@@ -22,7 +22,7 @@ X = Z = b ,Y = a ;
 X = Y = b ,Z = a ;
 X = Y = Z = b ;		There are 2^3 = 8 solutions.
 */
-mem([],_).
+mem([],_L).
 mem([H|T],L):- member(H,L),mem(T,L).
 
 find([A1,A2,A3,A4,A5]) :-  mem([A1,A2,A3,A4,A5],[true,false]),
@@ -38,7 +38,7 @@ find([A1,A2,A3,A4,A5]) :-  mem([A1,A2,A3,A4,A5],[true,false]),
 ?- count(b,[a,b,c,b],N).
 N=2
 */
-count(_,[],0).
+count(_A,[],0).
 count(A,[A|T],N):- count(A,T,N1),N is N1+1,!.
 count(A,[_|T],N):- count(A,T,N).
 

@@ -12,7 +12,7 @@ means one digit in common different place, B(Bingo) means one digit in common in
 ?- start(I).
 [3,7,1,9]
 *************************************************/
-start(S):-  S=[X,Y,Z,W],   %% to check S=[3,7,1,9],
+start(S):-  S=[_X,_Y,_Z,_W],   %% to check S=[3,7,1,9],
 			mem(S,[1,2,3,4,5,6,7,8,9]),is_set(S),
 			intersection([8,9,5,1],S,L1),length(L1,2), % 2 elements in common
 			intersection([2,1,6,9],S,L2),length(L2,2),samePlace(S,[2,1,6,9],[_]), 
@@ -31,5 +31,5 @@ samePlace([],[],[]).
 samePlace([H|T1],[H|T2],[H|R]):- samePlace(T1,T2,R).
 samePlace([_|T1],[_|T2],R):- samePlace(T1,T2,R).                         
 
-mem([],L).
+mem([],_L).
 mem([H|T],L):-member(H,L),mem(T,L).

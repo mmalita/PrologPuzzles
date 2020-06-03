@@ -47,7 +47,7 @@ X = b Y = a Z = b ;
 X = b Y = b Z = a ;
 X = b Y = b Z = b ;
 **************************************/ 
-mem([],Y).
+mem([],_Y).
 mem([H|T],Y):-member(H,Y),mem(T,Y).
 
 find(Sol):- Sol =  [S1,R1,N1,S2,R2,N2],

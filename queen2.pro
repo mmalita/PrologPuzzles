@@ -23,13 +23,13 @@ not_diagonal([X/Y,X1/Y1]):- A is abs(X-X1),B is abs(Y-Y1),A \= B.
 	?- mem1([X,Y],[a,b,c]).
 	[a,b][a,c][b,c]
 */
-mem1([],Y).
+mem1([],_Y).
 mem1([H|T],Y):-member(H,Y),rest(H,Y,New),mem1(T,New).
 /* rest(A,L,R). Returns the rest of the list after the first occurrence of A. 
 	| ?- rest(a,[a,b,c,d],I).	I = [b,c,d]
 	| ?- rest(a,[b,c,d],I).		I = []
 */
-rest(A,L,R):-Y=[A|R],append(X,Y,L),!.
+rest(A,L,R):-Y=[A|R],append(_X,Y,L),!.
 /* comb(N,L,Res). Combinations. Arrangements without " order".	
 	| ?- comb(2,[a,b,c],I).
 	I = [a,b] ;	I = [a,c] ;	I = [b,c] ;

@@ -15,10 +15,10 @@ N = 12
 L = [[g1, g3, b1, b2, g2], [g1, g3, b2, b1, g2], [g1, b1, g3, b2, g2], ...]
 N = 24 
 ****************************************************************/
-start1(Sol):- Sol=[X,Y,Z,U,V],permutation([X,V],[b1,b2]),
+start1(Sol):- Sol=[X,_Y,_Z,_U,V],permutation([X,V],[b1,b2]),
               permutation(Sol,[b1,b2,g1,g2,g3]).
           
-start2(Sol):- Sol=[X,Y,Z,U,V],member(X,[g1,g2,g3]),
+start2(Sol):- Sol=[X,_Y,_Z,_U,V],member(X,[g1,g2,g3]),
 				member(V,[g1,g2,g3]),permutation(Sol,[b1,b2,g1,g2,g3]).
 
 start3(Sol):- Sol=[X,Y,Z,U,V],permutation([X,Z,V],[g1,g2,g3]),

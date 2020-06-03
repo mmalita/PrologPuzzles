@@ -15,7 +15,7 @@ solution Team=[team,captain,color]
 S=[[united,cooke,red],[rovers,allen,blue],[county,dixon,white],[albion,evans,yellow],[thistle,boyle,green]]
 ************************************************************************************/                                   
 start:- S=[T1,T2,T3,T4,T5],
-           T1=[H1,N1,C1], T2=[H2,allen,C2], T3=[H3,N3,C3], T4=[H4,N4,C4], T5=[H5,boyle,C5],
+           T1=[H1,_N1,C1], T2=[H2,allen,C2], T3=[H3,_N3,C3], T4=[H4,_N4,C4], T5=[H5,boyle,C5],
            Colors=[yellow,red,blue,white,green],
 		   Teams=[united,albion,rovers,thistle,county],
 		   permutation([C1,C2,C3,C4,C5],Colors),

@@ -62,7 +62,7 @@ cross(X,L):- comb(1,L,X); comb(2,L,X).
 	?- mem1([X,Y],[a,b,c]).
 	[a,b][a,c][b,c]
 */
-mem1([],Y).
+mem1([],_Y).
 mem1([H|T],Y):-member(H,Y),rest(H,Y,New),mem1(T,New).
 
 rest(A,L,R):- append(_,[A|R],L),!.

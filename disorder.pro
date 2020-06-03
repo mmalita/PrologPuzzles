@@ -32,7 +32,7 @@ They cannot align side by side, ups and downs or diagonally.
 6    8     3
      2
 ******************************************************/
-start:-	S=[A,B,C,D,E,F,G,H],permutation([1,2,3,4,5,6,7,8],S),
+start:-	S=[_A,_B,_C,_D,_E,_F,_G,_H],permutation([1,2,3,4,5,6,7,8],S),
 		shape(S),write_square(S).
 
 consec(X,Y) :-  1 is abs(X - Y).

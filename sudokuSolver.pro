@@ -29,7 +29,7 @@ false
 different([],[]).
 different([H1|T1],[H2|T2]):- \+var(H1),\+var(H2),
                              H1\=H2,different(T1,T2),!.
-different([H1|T1],[H2|T2]):- different(T1,T2),!.
+different([_H1|T1],[_H2|T2]):- different(T1,T2),!.
 
 /*
 Integers do not repeat in blocks 3x3
