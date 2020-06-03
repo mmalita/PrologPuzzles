@@ -16,7 +16,7 @@ X = def
 start:-write('Write your name? '),read(X),
 		write('\nhere are the anagrams:\n'),
 		name(X,L),permutation(L,R),name(Word,R),
-		write(Word),tab(5).
+		write(Word),tab(5),false.
 		
 		
 		
