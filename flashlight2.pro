@@ -44,9 +44,9 @@ tim(d,10).
 /* define the arcs (or move conditions from a state node) to another state(node) */
 arc([T1,F1,L1,R1], [T2,F2,L2,R2]):- opp(F1,F2),
 		((F1=l,cross(X,L1),
-        take(X,L1,L2),append(X,R1,R2),findtime(X,T),T2 is T1+T);
+        take(X,L1,L2u),append(X,R1,R2),findtime(X,T),T2 is T1+T);
     	(F1=r,cross(X,R1),
-        take(X,R1,R2),append(X,L1,L2),findtime(X,T),T2 is T1+T)),T2 < 18.
+        take(X,R1,R2),append(X,L1,L2u),findtime(X,T),T2 is T1+T)),msort(L2u,L2),T2 < 18.
 
 /* remove all elements in S from L result is in R */
 take(S,L,R):- findall(Z,(member(Z,L),\+member(Z,S)),R).
