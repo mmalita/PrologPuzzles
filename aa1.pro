@@ -23,7 +23,7 @@ sol(Swim,Bike):- St=[sandy,andrew,corey,dan],
 	Swim=[Hs|_],andrew\==Hs,Bike=[Hb|_],andrew\==Hb,     %% 1
 	Bike=[_,_,Hs,_],                                     %% 2
 	before(andrew,corey,Swim),before(corey,andrew,Bike), %% 3
-	not(last(Swim,corey)),not(last(Bike,corey)),         %% 4
+	\+last(Swim,corey),\+last(Bike,corey),               %% 4
 	Bike=[dan|_],before(sandy,dan,Swim).                 %% 5
 
 /* 	?-before(a,c,[m,a,v,c,d]).

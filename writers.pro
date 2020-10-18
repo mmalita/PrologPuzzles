@@ -35,8 +35,9 @@ start(S):- S=[[X1,W1,R1],[X2,W2,R2],[X3,W3,R3],[X4,W4,R4],[X5,W5,R5],[X6,W6,R6]]
 	member([green,_,theater],S), 	%% 6. Mr. Green reads theater.
 	member([red,_,pamphlets],S), 	%% 10. Mr. Red reads a book of pamphlets.
 	%% 3. Mr. Yellow sits between the essay guy and pamphlet guy.
-       	( S=[[_,essays,_],[yellow,_,_],[_,pamphlets,_],_,_,_] ;
-	  S=[_,_,_,[_,essays,_],[yellow,_,_],[_,pamphlets,_]] ),
+		nth1(Ne,S,[_,essays,_]), nth1(Ny,S,[yellow,_,_]), nth1(Np,S,[_,pamphlets,_]),
+		((Ny==2, member(Ne,[1,3]), member(Np,[1,3])) ;
+		 (Ny==5, member(Ne,[4,6]), member(Np,[4,6]))),
  	near([red,_,_],[_,theater,_],S), 	%% 4. Mr. Red sits near the playwriter.
 	%% 9. Mr. Green sits in front of the novelist.
         nth1(Ng,S,[green,_,_]),nth1(Nn,S,[_,novels,_]),vis_a_vis(Nn,Ng),
@@ -45,14 +46,14 @@ start(S):- S=[[X1,W1,R1],[X2,W2,R2],[X3,W3,R3],[X4,W4,R4],[X5,W5,R5],[X6,W6,R6]]
         permutation([R1,R2,R3,R4,R5,R6],Type),
         W1\==R1,W2\==R2,W3\==R3,W4\==R4,W5\==R5,W6\==R6,
         %% 7. Mr. Yellow is the brother in law of the novelist.
-	not(member([yellow,novels,_],S)),
+	\+member([yellow,novels,_],S),
       	%% 2. Mr. Blue does not like to sit in the corner in the direction of the train.
-        nth1(Nbb,S,[blue,_,_]), Nbb\==6,     
+        nth1(Nbb,S,[blue,_,_]), \+member(Nbb,[4,6]),     
         %% 8. Mr. Black is staying in a corner and does not like history.
 	nth1(Nb,S,[black,_,_]),corner(Nb), 
-	not(member([black,history,_],S)),
+	\+member([black,history,_],S),
+	\+member([black,_,history],S),
    	%% 5. The essayist  sits in front of the historian.	
-	nth1(Ne,S,[_,essays,_]), nth1(Nh,S,[_,history,_]),
-        vis_a_vis(Ne,Nh),  
-        %% 11. Mr. Red reads a book of pamphlets.
-	not(member([white,_,poems],S)).
+	nth1(Nh,S,[_,history,_]),vis_a_vis(Ne,Nh),  
+        %% 11. Mr. White never reads poems.
+	\+member([white,_,poems],S).

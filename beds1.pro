@@ -32,7 +32,7 @@ start(Sol):- Sol=[[N1,C1],[N2,C2],[kayla,C3],[N4,C4],[N5,C5],[N6,C6]],((N1=reeva
                 member([black,yellow],[[C1,C2],[C3,C4],[C5,C6]]), /* 9 */
                 member(green,[C1,C2,C3,C4,C5,C6]),
                 member([beth,C],Sol),member(C,[red,yellow,green]),   /* 3 */
-		not(N4=zoe). /* 7 */		
+		N4\=zoe. /* 7 */		
                
 
                 

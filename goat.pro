@@ -2,7 +2,8 @@
    Title: The goat problem
 A farmer has to cross a river with a wolf, a goat and a cabbage.
 He has a boat, but in the boat he can take just one thing.
-He cannot let the goat alone with the wolf or the goat with the cabbage. It’s obvious why. What is the solution?
+He cannot let the goat alone with the wolf or the goat with the cabbage.
+It’s obvious why. What is the solution?
 We describe the problem as Nodes in a graph and the solution means to find a path from the initial node to the final node.
 	state(s) = node in graph 
 	s(farmer(Bank),goat(Bank),cabbage(Bank),wolf(Bank)).
@@ -18,8 +19,8 @@ start:- initial(S),path(S,[],Sol),
 	final(s(farmer(w),goat(w),cabbage(w),wolf(w))).
 
 path(Node,Path,[Node|Path]):- final(Node).
-path(Node,Path,Sol):- move(Node,N1), not(bad(N1)),
-                      not(member(N1,Path)),                    
+path(Node,Path,Sol):- move(Node,N1), \+bad(N1),
+                      \+member(N1,Path),                    
                       path(N1,[Node|Path],Sol).
 
 %% opposite bank East is opposite to west Bank. opp/2   

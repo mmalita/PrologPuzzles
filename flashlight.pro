@@ -30,7 +30,7 @@ Found sol=[17,r,a(r),b(r),c(r),d(r)]
 start:- initial(S),path(S,[],Sol),write('Found sol='),forall(member(X,Sol),(write(X),nl)).
 
 path(N,P,[N|P]):- final(N).
-path(N,P,Sol):- arc(N,N1),not(member(N1,P)),path(N1,[N|P],Sol).
+path(N,P,Sol):- arc(N,N1),\+member(N1,P),path(N1,[N|P],Sol).
 
 initial([0,l,a(l),b(l),c(l),d(l)]). %% start l=left r=right
 final([17,r,a(r),b(r),c(r),d(r)]). %% in the end all on the same side

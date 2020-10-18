@@ -75,10 +75,10 @@ intersection_2([X,Y]):-intersection(X,Y,R),length(R,2).
 	?- mem1([X,Y],[a,b,c]).
 	[a,b][a,c][b,c]
 */
-mem1([],Y).
+mem1([],_Y).
 mem1([H|T],Y):-member(H,Y),rest(H,Y,New),mem1(T,New).
 
-rest(A,L,R):-Y=[A|R],append(X,Y,L),!.
+rest(A,L,R):-Y=[A|R],append(_X,Y,L),!.
 /* comb(N,L,Res). Combinations. Arrangements without " order".	
 	| ?- comb(2,[a,b,c],I).
 	I = [a,b] ;	I = [a,c] ;	I = [b,c] ;

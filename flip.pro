@@ -30,7 +30,7 @@ start:- initial(S),path(S,[],Sol),
     final([t,t,t]).
 
 path(Node,Path,[Node|Path]):- final(Node).
-path(Node,Path,Sol):- move(Node,N1),not(member(N1,Path)),                    
+path(Node,Path,Sol):- move(Node,N1),\+member(N1,Path),                    
                       path(N1,[Node|Path],Sol).
 %% 
 	opp(h,t).  

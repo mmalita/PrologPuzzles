@@ -14,7 +14,7 @@ I = [[clark,ann,wine],[davidson,mary,cookie],
 ****************************************************************/
 start(Final):- Final=[[_,_,wine],[_,_,cookie],[_,_,cofee],[_,_,_]],
 			member([andrew,_,chocolate],Final),
-			member([brown,_,Bb],Final), Bb \== cookie),
+			member([brown,_,Bb],Final), Bb \== cookie,
 			member([_,vivien,Bv],Final),Bv \== cookie,
             member([clark,ann,Ba],Final), Ba \== cookie,
             member([_,mary,Bm],Final), Bm \== wine,

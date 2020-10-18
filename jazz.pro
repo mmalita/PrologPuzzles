@@ -1,4 +1,4 @@
-/*   File: Puzzle/jazz.pro     (solution MM)
+/*   File: Puzzles/jazz.pro     (solution MM)
     Title: Sounds Logical?   From: Dell- Math Puzzles Logic Problems,	Jan 2002 p.15
 " Giant Book of Challenging Thinking Puzzles",
 Michael A. DiSPezio,Sterling Pub. House, ISBN  1-4027-1090-9, 2003 
@@ -15,7 +15,7 @@ Solution = [S1,R1,N1,S2,R2,N2]
 ?- start.
      SATURDAY           SUNDAY       
 Sheila Ramon Niko Sheila Ramon Niko
-jazz  rock  jazz  jazz  rock  jazz  
+jazz  rock  jazz  jazz  rock  rock  
 ****************************************************/
 start:- find(Sol), mywrite(Sol),nl.
 mywrite(L) :- write('   SATURDAY           SUNDAY       '),nl,
@@ -31,8 +31,8 @@ find(Sol):- Sol =  [S1,R1,N1,S2,R2,N2],
         member(R2,[jazz,rock]),
         is_set([S1,R1]), %% 2. If Sheila picks rock, Niko picks jazz.
         is_set([S2,R2]), %% that is different
-	not([N1,R1]=[jazz,jazz]), %% 3. Niko and Ramon do not both pick jazz.
-	not([N2,R2]=[jazz,jazz]),
+	[N1,R1]\=[jazz,jazz], %% 3. Niko and Ramon do not both pick jazz.
+	[N2,R2]\=[jazz,jazz],
         (S1=jazz ; (S1=rock,N1=jazz) ) , %% if sheila picks jazz does not matter
         (S2=jazz ; (S2=rock,N2=jazz)).   %% %% is sheila picks rock, Nick has jazz
 */
@@ -47,15 +47,15 @@ X = b Y = a Z = b ;
 X = b Y = b Z = a ;
 X = b Y = b Z = b ;
 **************************************/ 
-mem([],Y).
+mem([],_Y).
 mem([H|T],Y):-member(H,Y),mem(T,Y).
 
 find(Sol):- Sol =  [S1,R1,N1,S2,R2,N2],
         mem(Sol,[jazz,rock]),
         is_set([S1,R1]), %% 2. If Sheila picks rock, Niko picks jazz.
         is_set([S2,R2]), %% that is different
-		not([N1,R1]=[jazz,jazz]), %% 3. Niko and Ramon do not both pick jazz
-		not([N2,R2]=[jazz,jazz]),
-        (S1=jazz ; (S1=rock,N1=jazz) ) , %% is sheila picks jazz does not matter
-        (S2=jazz ; (S2=rock,N2=jazz)).   %% %% is sheila picks rock, Nick has jazz
-
+		[N1,R1]\=[jazz,jazz], %% 3. Niko and Ramon do not both pick jazz
+		[N2,R2]\=[jazz,jazz],
+        (S1=jazz ; (S1=rock,N1=jazz) ) , %% if sheila picks jazz does not matter
+        (S2=jazz ; (S2=rock,N2=jazz)),   %% %% if sheila picks rock, Nick has jazz
+        ([S1,S2]=[jazz,rock] ; [R1,R2]=[jazz,rock] ; [N1,N2]=[jazz,rock]).   %% %% at least one of them bought jazz on Saturday and rock on Sunday
