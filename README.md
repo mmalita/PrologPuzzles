@@ -5,8 +5,8 @@ Puzzles inspired from: <a href="http://catalogue.pearsoned.co.uk/educator/produc
 <a href="http://www.pearsoned.co.uk/HigherEducation/Titlesby/Luger/">G.F. Luger</a>
 <a href="http://www.be-logic.ro">A.Atanasiu</a>
 <a href="http://www.mensa.org.uk/puzzles">Mensa Puzzles</a>
-1. zebra.pro - Who drinks water and who has a zebra?
-2. beds1.pro -  Bunks Beds
+1. <a href="zebra.pro">zebra.pro</a> - Who drinks water and who has a zebra?
+2. <a href="beds1.pro">beds1.pro</a> -  Bunks Beds
 3. jobs1.pro - Four professions
 4. lunch2.pro -  The lunch problem
 5. costume.pro - The Costume Ball 
