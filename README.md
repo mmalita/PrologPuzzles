@@ -7,35 +7,35 @@ Puzzles inspired from: <a href="http://catalogue.pearsoned.co.uk/educator/produc
 <a href="http://www.mensa.org.uk/puzzles">Mensa Puzzles</a>
 1. <a href="zebra.pro">zebra.pro</a> - Who drinks water and who has a zebra?
 2. <a href="beds1.pro">beds1.pro</a> -  Bunks Beds
-3. jobs1.pro - Four professions
-4. lunch2.pro -  The lunch problem
-5. costume.pro - The Costume Ball 
-6. aa6.pro - Thursday Bridge Party. Who brings What?
-7. aa1.pro - Swimming and biking contest
-8. ifthen.pro - The false statements
-9. queen2.pro - Eight queens on a chessboard
-10. knightN.pro - Knight on a chessboard
-11. seating.pro - Seating
-12. magic.pro - Magic square
-13. buffalo.pro - Babysitting
-14. gradepuzzle.pro - The Grade Puzzle
-15. jazz.pro - CD choice: jazz
-16. flip.pro - Flip coins
-17. anagram.pro - Anagrams
-18. message.pro - News propagation
-19. phone.pro - Phone Number. From digits to letters
-20. flashlight2.pro - Bridge crossing
-21. canibmm.pro - Missionaries and cannibals
-22. goat.pro - Farmer, goat, wolf and a cabbage
-23. river.pro - Cross river: Adults and children
-24. moremoney.pro - Send More Money
-25. words.pro - Word Squares
-26. coins0.pro - Coins
-27. sudoku.pro - Sudoku Generator 
-28. sudokuSolver.pro - Sudoku Solver
-29. disorder.pro - Disorder
-30. secretNumber.pro - Secret Number
-31. soccer.pro - Soccer
-32. archi.pro - Shoe Shopping
-33. flashlight.pro - Flashlight
-34. writers.pro -Writers
+3. <a href="jobs1.pro">jobs1.pro</a> - Four professions
+4. <a href="lunch2.pro">lunch2.pro</a> -  The lunch problem
+5. <a href="costume.pro">costume.pro</a> - The Costume Ball 
+6. <a href="aa6.pro">aa6.pro</a> - Thursday Bridge Party. Who brings What?
+7. <a href="aa1.pro">aa1.pro</a> - Swimming and biking contest
+8. <a href="ifthen.pro">ifthen.pro</a> - The false statements
+9. <a href="queen2.pro">queen2.pro</a> - Eight queens on a chessboard
+10. <a href="knightN.pro">knightN.pro</a> - Knight on a chessboard
+11. <a href="seating.pro">seating.pro</a> - Seating
+12. <a href="magic.pro">magic.pro</a> - Magic square
+13. <a href="buffalo.pro">buffalo.pro</a> - Babysitting
+14. <a href="gradepuzzle.pro">gradepuzzle.pro</a> - The Grade Puzzle
+15. <a href="jazz.pro">jazz.pro</a> - CD choice: jazz
+16. <a href="flip.pro">flip.pro</a> - Flip coins
+17. <a href="anagram.pro">anagram.pro</a> - Anagrams
+18. <a href="message.pro">message.pro</a> - News propagation
+19. <a href="phone.pro">phone.pro</a> - Phone Number. From digits to letters
+20. <a href="flashlight2.pro">flashlight2.pro</a> - Bridge crossing
+21. <a href="canibmm.pro">canibmm.pro</a> - Missionaries and cannibals
+22. <a href="goat.pro">goat.pro</a> - Farmer, goat, wolf and a cabbage
+23. <a href="river.pro">river.pro</a> - Cross river: Adults and children
+24. <a href="moremoney.pro">moremoney.pro</a> - Send More Money
+25. <a href="words.pro">words.pro</a> - Word Squares
+26. <a href="coins0.pro">coins0.pro</a> - Coins
+27. <a href="sudoku.pro">sudoku.pro</a> - Sudoku Generator 
+28. <a href="sudokuSolver.pro">sudokuSolver.pro</a> - Sudoku Solver
+29. <a href="disorder.pro">disorder.pro</a> - Disorder
+30. <a href="secretNumber.pro">secretNumber.pro</a> - Secret Number
+31. <a href="soccer.pro">soccer.pro</a> - Soccer
+32. <a href="archi.pro">archi.pro</a> - Shoe Shopping
+33. <a href="flashlight.pro">flashlight.pro</a> - Flashlight
+34. <a href="writers.pro">writers.pro</a> -Writers
