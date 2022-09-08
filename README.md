@@ -1,6 +1,6 @@
 # PrologPuzzles
 Mihaela Malita Copyright 2017 
-SWI Prolog http://www.swi-prolog.org/ version 7.2.3 by Jan Wielemaker (jan@swi-prolog.org)
+SWI Prolog http://www.swi-prolog.org/ version 7.2.3 by Jan Wielemaker (jan@swi-prolog.org)<br>
 Puzzles inspired from: <a href="http://catalogue.pearsoned.co.uk/educator/product/Prolog-Programming-for-Artificial-Intelligence/9780321417466.page">Ivan Bratko</a>
 <a href="http://www.pearsoned.co.uk/HigherEducation/Titlesby/Luger/">G.F. Luger</a>
 <a href="http://www.be-logic.ro">A.Atanasiu</a>
